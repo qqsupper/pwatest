@@ -5,8 +5,8 @@ const CACHE_NAME='FANMAN V1.0.0';
 // 列举要默认缓存的静态资源，一般用于离线使用
 
 const urlsToCache=[
-    '/js/offline.js',
-    '/images/offline.png'
+    './offline.js',
+    '../images/offline.png'
 ];
 
 
