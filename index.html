@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src='./js/offline.js'></script>
 </head>
 <body>
 
-    <div>pwa1234</div>
-    
+    <div>pwa12345</div>
+    <img src="./images/offline.png" alt="">
 
 <script>
     if('serviceWorker' in navigator){
         navigator.serviceWorker
-                .register('index.js',{scope:'/pwatest/'})
+                .register('./js/index.js',{scope:'/pwatest/'})
                 .then(registeration=>console.log('ServiceWorker 注册成功,作用域为:',registeration.scope))
                 .catch(err=>console.log('service 注册失败:'+err))
     }
