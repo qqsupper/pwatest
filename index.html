@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>pwa</div>
+    
+
+<script>
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker
+                .register('./index.js',{scope:'/js/'})
+                .then(registeration=>console.log('ServiceWorker 注册成功,作用域为:',registeration.scope))
+                .catch(err=>console.log('service 注册失败:'+err))
+    }
+
+</script>
+</body>
+</html>
