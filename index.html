@@ -14,7 +14,7 @@
 <script>
     if('serviceWorker' in navigator){
         navigator.serviceWorker
-                .register('./js/index.js',{scope:'/'})
+                .register('index.js',{scope:'/'})
                 .then(registeration=>console.log('ServiceWorker 注册成功,作用域为:',registeration.scope))
                 .catch(err=>console.log('service 注册失败:'+err))
     }
