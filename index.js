@@ -1,12 +1,12 @@
-console.log('index2')
+console.log('index123')
 // 用于标注创建的缓存，也可以根据它来建立版本规范
 
 const CACHE_NAME='FANMAN V1.0.0';
 // 列举要默认缓存的静态资源，一般用于离线使用
 
 const urlsToCache=[
-    'offline.js',
-    '../images/offline.png'
+    '/js/offline.js',
+    '/images/offline.png'
 ];
 
 

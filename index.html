@@ -9,13 +9,13 @@
 </head>
 <body>
 
-    <div>pwa1234</div>
+    <div>pwa12345</div>
     <img src="./images/offline.png" alt="">
 
 <script>
     if('serviceWorker' in navigator){
         navigator.serviceWorker
-                .register('./js/index.js')
+                .register('/index.js')
                 .then(registeration=>console.log('ServiceWorker 注册成功,作用域为:',registeration.scope))
                 .catch(err=>console.log('service 注册失败:'+err))
     }
