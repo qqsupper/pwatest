@@ -97,7 +97,7 @@ function offlineRequest(request){
 }
 
 self.addEventListener('fetch',event=>{
-        event.responseWith(
+        event.respondWith(
             caches.match(event.request)
                 .then(hit=>{
                     console.log(hit);
