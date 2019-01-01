@@ -66,7 +66,11 @@ function onlineRequest(fetchRequest){
     // 使用fetch API获取资源,以实现对资源请求控制
     return fetch(fetchRequest).then(response=>{
         //在资源请求成功后，将image、js、css资源加入缓存列表
-        if(!response||response.status!==200||!response.headers.get('Content-type').match(/image|javascript|text\/css /i)){
+        // if(!response||response.status!==200||!response.headers.get('Content-type').match(/image|javascript|text\/css |text\/html/i)){
+        //     return response;
+        // }
+
+        if(!response||response.status!==200||!response.type!=='basic'){
             return response;
         }
         const responseToCache=response.clone();
@@ -78,7 +82,7 @@ function onlineRequest(fetchRequest){
          return response;       
     }).catch(()=>{
         // 获取失败,离线资源降级替换
-        offlineRequest(fetchRequest);
+        // offlineRequest(fetchRequest);
     })
 }
 
