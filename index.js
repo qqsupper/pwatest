@@ -1,7 +1,7 @@
 console.log('index123')
 // 用于标注创建的缓存，也可以根据它来建立版本规范
 
-const CACHE_NAME='FANMAN V1.0.0';
+const CACHE_NAME='FANMAN V2.0.0';
 // 列举要默认缓存的静态资源，一般用于离线使用
 
 const urlsToCache=[
@@ -9,6 +9,9 @@ const urlsToCache=[
     './images/offline.png'
 ];
 
+ 
+
+// self 为当前 scope 内的上下文
 
 self.addEventListener('install',event=>{
     // event.waitUtil 用于在安装成功之前执行一些预装逻辑
@@ -28,3 +31,28 @@ self.addEventListener('install',event=>{
     )
 
 })
+
+
+// // 更新清理旧版本cache Storage里面缓存文件
+//  //安装阶段跳过等待,直接进入active
+// self.addEventListener('install',function(event){
+//     event.waitUntil(self.skipWaiting());
+// })
+
+
+self.addEventListener('activate',event=>event.waitUntil(
+    Promise.all([
+        //更新客户端
+        clients.claim(),
+        //清理旧版本
+        caches.keys().then(cacheList=>Promise.all(
+            cacheList.map(cacheName=>{
+                console.log(cacheName);
+                if(cacheName!==CACHE_NAME){
+                    caches.delete(cacheName);
+                }
+            })
+        ))
+    ])
+
+))
