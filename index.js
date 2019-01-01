@@ -7,7 +7,8 @@ const CACHE_NAME='FANMAN V5.0.0';
 const urlsToCache=[
     './js/offline.js',
     './images/offline.png',
-    './css/main.css'
+    './css/main.css',
+    './index.html'
 ];
 
  
