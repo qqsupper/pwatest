@@ -8,7 +8,8 @@ const urlsToCache=[
     './js/offline.js',
     './images/offline.png',
     './css/main.css',
-    './index.html'
+    './index.html',
+    './html/offline.html'
 ];
 
  
@@ -93,6 +94,10 @@ function offlineRequest(request){
         // 使用离线js
         if(request.url.match(/\.js$/)){
             return caches.match('/js/offline.js');
+        }
+
+        if(request.url.match(/\.html$/)){
+            return caches.match('/html/offline.html');
         }
 
 }
