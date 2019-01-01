@@ -112,13 +112,15 @@ self.addEventListener('fetch',event=>{
                    }
                     const fetchRequest=event.request.clone();
 
-                    if(navigator.onLine){
-                        // 如果为联网状态
-                        return onlineRequest(fetchRequest);
-                    }else{
-                        // 如果为离线状态
-                        return offlineRequest(fetchRequest);
-                    }
+
+                    return onlineRequest(fetchRequest);
+                    // if(navigator.onLine){
+                    //     // 如果为联网状态
+                        
+                    // }else{
+                    //     // 如果为离线状态
+                    //     return offlineRequest(fetchRequest);
+                    // }
                 })
         )
 
