@@ -29,7 +29,7 @@
 <script>
     if('serviceWorker' in navigator){
         navigator.serviceWorker
-                .register('./index.js')
+                .register('./index.js',{scope:'/pwatest/'})
                 .then(registeration=>{console.log('ServiceWorker 注册成功,作用域为:',registeration.scope)
             
                         // 手动更新
