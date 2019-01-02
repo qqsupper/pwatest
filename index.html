@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./manifest.json">
     <link rel="stylesheet" href="./css/main.css">
     <script src='./js/offline.js'></script>
 </head>
 <body>
 
-    <div id='pwa' onclick="add()" >pwa1234567</div>
+    <div id='pwa' onclick="add()" >pwa1234</div>
     <img src="./images/offline.png" alt="">
+   
     <a href="./html//offline.html">跳到离线页面</a>
+
+
 
 
 <script>
     if('serviceWorker' in navigator){
         navigator.serviceWorker
                 .register('./index.js')
-                .then(registeration=>console.log('ServiceWorker 注册成功,作用域为:',registeration.scope))
+                .then(registeration=>{console.log('ServiceWorker 注册成功,作用域为:',registeration.scope)
+            
+                        // 手动更新
+                        registeration.update();
+            })
                 .catch(err=>console.log('service 注册失败:'+err))
     }
 
