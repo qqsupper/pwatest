@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="manifest" href="./mainfest2.json">
+    <link rel="manifest" href="./mainfest3.json">
     <link rel="stylesheet" href="./css/main.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -29,7 +29,7 @@
 <script>
     if('serviceWorker' in navigator){
         navigator.serviceWorker
-                .register('./index.js',{scope:'/'})
+                .register('./index.js')
                 .then(registeration=>{console.log('ServiceWorker 注册成功,作用域为:',registeration.scope)
             
                         // 手动更新

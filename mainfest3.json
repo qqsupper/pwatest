@@ -4,7 +4,7 @@
   "theme_color": "#e9f0f6",
   "background_color": "#117acd",
   "display": "standalone",
-  "Scope": "/",
+  "Scope": "/pwatest/",
   "start_url": "/",
   "icons": [
     {
