@@ -3,7 +3,8 @@
   "short_name": "demo",
   "theme_color": "#e9f0f6",
   "background_color": "#117acd",
-  "display": "standalone",
+  "display": "fullscreen",
+  "prefer_related_applications": false,
   "start_url": ".",
   "icons": [
     {
