@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="manifest" href="./manifest2.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="./css/main.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -23,8 +23,9 @@
    
     <a href="./html//offline.html">跳到离线页面</a>
 
-
-
+    <a href="https://pkbet.org/m">建议坚持登录</a>
+    
+    <div id='baidu'>跳到百度</div>
 
 <script>
     if('serviceWorker' in navigator){
@@ -36,8 +37,13 @@
                         registeration.update();
             })
                 .catch(err=>console.log('service 注册失败:'+err))
-    }
 
+           
+    }
+    var baidu=document.getElementById('baidu');
+    baidu.onclick=function(){
+        window.onpen('http://www.baidu.com')
+    }
    
 </script>
 </body>
