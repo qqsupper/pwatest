@@ -10,7 +10,7 @@ const urlsToCache=[
     './js/offline.js',
     './images/offline.png',
     './css/main.css',
-    './index.html',
+    // './index.html',
     './index.js',
     './html/offline.html'
 ];
