@@ -11,7 +11,7 @@ const urlsToCache=[
     './images/offline.png',
     './css/main.css',
     // './index.html',
-    './index.js',
+    './index.js',  
     './html/offline.html'
 ];
 
